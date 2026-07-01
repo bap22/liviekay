@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -18,21 +19,17 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white/90 backdrop-blur-sm border-b border-[#ede4f8] sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col items-center leading-tight group">
-          <span
-            className="text-2xl md:text-3xl font-bold tracking-widest text-[#2d2d2d] group-hover:text-[#9b72cc] transition-colors"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >
-            LIVIE KAY
-          </span>
-          <span
-            className="text-xs tracking-[0.35em] text-[#9b72cc] uppercase"
-            style={{ fontFamily: "var(--font-lato), sans-serif" }}
-          >
-            Esthetics
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/logo.svg"
+            alt="Livie Kay Esthetics"
+            width={110}
+            height={60}
+            className="h-14 w-auto object-contain group-hover:opacity-80 transition-opacity"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,19 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="flex flex-col items-start gap-4">
-            <div>
-              <p
-                className="text-2xl font-bold tracking-widest"
-                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-              >
-                LIVIE KAY
-              </p>
-              <p
-                className="text-xs tracking-[0.35em] text-[#c8a8e9] uppercase"
-                style={{ fontFamily: "var(--font-lato), sans-serif" }}
-              >
-                Esthetics
-              </p>
+            <div className="bg-white/10 rounded px-3 py-2">
+              <Image
+                src="/logo.svg"
+                alt="Livie Kay Esthetics"
+                width={110}
+                height={60}
+                className="h-14 w-auto object-contain brightness-0 invert opacity-90"
+              />
             </div>
             <p
               className="text-sm text-gray-400 leading-relaxed"
