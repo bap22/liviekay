@@ -22,7 +22,7 @@ function buildICS(data: {
   const dtStart = `${year}${pad(month)}${pad(day)}T${pad(startHour)}0000`;
   const dtEnd = `${year}${pad(month)}${pad(day)}T${pad(endHour)}0000`;
   const dtStamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-  const uid = `${dtStamp}-liviekay@liviekayesthetics.com`;
+  const uid = `${dtStamp}-liviekay@liviekay.com`;
 
   const description = [
     `Client: ${data.clientName}`,
@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
 
     // Email to Olivia with the .ics calendar attachment
     const ownerEmail = await resend.emails.send({
-      from: "Livie Kay Bookings <bookings@liviekayesthetics.com>",
+      from: "Livie Kay Bookings <bookings@liviekay.com>",
       to: "liviekay@icloud.com",
       subject: `New Booking Request — ${name} · ${service}`,
       html: `
@@ -233,7 +233,7 @@ export async function POST(req: NextRequest) {
             </p>
             <div style="margin-top: 24px; padding: 16px; background: #f3ecfb; text-align: center;">
               <p style="font-family: Arial, sans-serif; font-size: 11px; color: #9b72cc; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 4px;">
-                Free Consultations Available
+                Free Consultations Availableß
               </p>
               <p style="font-family: Georgia, serif; font-size: 16px; color: #2d2d2d; margin: 0; font-style: italic;">
                 Can't wait to work with you ✦
