@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8fc;
+  --foreground: #2d2d2d;
+  --lavender: #c8a8e9;
+  --lavender-light: #ede4f8;
+  --lavender-dark: #9b72cc;
+  --lavender-mid: #b890db;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lavender: var(--lavender);
+  --color-lavender-light: var(--lavender-light);
+  --color-lavender-dark: var(--lavender-dark);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.floral-divider {
+  background: linear-gradient(to right, transparent, var(--lavender), transparent);
+  height: 1px;
+  width: 100%;
+  margin: 2rem 0;
+}
